@@ -1,0 +1,519 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
+
+/* Cabeçalho */
+header {
+    background-color: black;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.link-cabecalho {
+    text-decoration: none;
+    color: white;
+    display: inline-flex;
+
+}
+
+.link-cabecalho:hover {
+    background-color: #33a3dc;
+    padding: 8px;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+.lupa {
+    width: 50px;
+    margin-left: 80px;
+    margin-top: 0;
+}
+
+.Logo {
+    width: 250px;
+    margin-left: 18%;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+}
+
+li {
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+/* Layout Primario  */
+
+/* .layout {
+    width: 100%;
+    text-align: center;
+    background-color: #52c6d8;
+    border: #52c6d8;
+} */
+
+.slideshow-container{
+    background-color: #52c6d8;
+}
+.img-layout{
+    width: 1901px;
+    height: 860px;
+}
+  /* Hide the images by default */
+  .mySlides {
+    text-align: center;
+    
+  }
+  .botoes{
+    text-align: center;
+    background-color: #52c6d8;
+    margin-top: -40px;
+  }
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+
+/* Layout secundario  */
+
+.container-layout {
+    text-align: center;
+    background-color: #52c6d8;
+    padding: 40px;
+    margin-top: -5px;
+}
+
+.imagens-Layout {
+    width: 380px;
+    height: 350px;
+    margin-top: 10px;
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color: #33a3dc;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.container-paragrafo {
+    display: flex;
+    font-weight: bold;
+    margin-top: -40px;
+    color: white;
+}
+
+.frase-one {
+    margin-left: 150px;
+}
+
+.frase-two {
+    margin-left: 290px;
+}
+
+.frase-three {
+    margin-left: 340px;
+}
+
+
+
+/* Overclock Com Texto */
+
+.barra-preta {
+    margin-top: 80px;
+    z-index: 2;
+    position: absolute;
+
+}
+
+.barra-reta {
+    width: 1000px;
+    border-radius: 30px;
+    margin-left: 45%;
+    margin-top: 2%;
+}
+
+.paragrafo {
+    z-index: 1;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.Titulo-paragrafo {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.barra-reta-paragrafo {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Sabores dos Potes */
+
+.container-sabores {
+    background-color: #33a3dc;
+    padding: 10px;
+    color: white;
+}
+
+.titulo-principal-sabores {
+    text-align: center;
+}
+
+.imagens-sabores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-right: 30px;
+
+}
+
+.sabores {
+    display: flex;
+    width: 200px;
+    margin-left: 60px;
+    margin-right: 50px;
+    border: 3px solid white;
+    border-radius: 5px;
+
+}
+
+.sabores-one {
+    display: flex;
+    width: 200px;
+    margin-left: 80px;
+    margin-right: 15px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.sabores-two {
+    display: flex;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 80px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.sabores-three {
+    display: flex;
+    width: 200px;
+    margin-left: 60px;
+    margin-right: 60px;
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.container-titulo-sabores {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.titulo-sabores {
+    background-color: #52c6d8;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.Container-rotulos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 60px;
+    margin-left: 70px;
+    margin-top: 50px;
+
+}
+
+.rotulos {
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.more {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+
+.botao {
+    font-weight: bold;
+    background-color: #52c6d8;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-decoration: none;
+    color:white
+}
+
+.botao:hover {
+    font-weight: bold;
+    background-color: #000000;
+    padding: 10px;
+    border-radius: 10px;
+    color:#33a3dc;
+    text-decoration: none;
+
+}
+
+/* Noticias */
+
+.na-midia {
+    text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 700px;
+    margin-right: 700px;
+    padding: 20px;
+    color: white;
+    text-decoration: underline;
+}
+
+.container-Noticias {
+    margin: 50px;
+    display: flex;
+}
+
+.container-noticias-manchetes {
+    background-color: black;
+    margin-right: 30px;
+    padding: 30px;
+    color: white;
+    border-radius: 20px;
+}
+
+#imagens-noticias-r7 {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+#imagens-noticias-exame {
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#imagens-noticias-gkpb {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+/* titulo do overclock upgrade */
+.container-titulos {
+    padding: 40px;
+    font-size: 50px;
+    text-align: center;
+    background-color: #000000;
+}
+
+.titulo-overclock {
+    color: white;
+    margin-bottom: 0;
+
+}
+
+.titulo-upgrade {
+    color: #33a3dc;
+    margin-top: 0;
+
+}
+
+/* Video da Overclock Com Escrita */
+.container-video {
+    background-color: black;
+    margin-top: -30px;
+    padding-bottom: 50px;
+}
+
+.video-overclock {
+    float: right;
+    margin-right: 50px;
+    margin-top: -400px;
+    margin-bottom: 50px;
+    border: 3px solid white;
+}
+
+.frase-titulo {
+    color: white;
+    padding-left: 50px;
+}
+
+.vantagens {
+    color: white;
+    padding-left: 5px;
+    padding-top: 5px;
+    display: flex;
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.bolinha-azul {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    margin-left: 25px;
+
+}
+
+.imagens-bolinha {
+    display: flex;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    align-items: center;
+}
+
+/* Fim do Site */
+.fim-do-site {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+    color: #33a3dc;
+}
+
+.local {
+    display: flex;
+}
+
+.img-localizacao {
+    width: 50px;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.img-email {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.img-telefone {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* Rodapé */
+.container-footer {
+    margin-top: 50px;
+    margin-left: 250px;
+}
+
+footer {
+    background-color: #33a3dc;
+    color: black;
+    padding: 10px;
+    padding-bottom: 170px;
+}
+
+h6 {
+    display: flex;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.kalles {
+    color: #33a3dc;
+}
+
+.rodape {
+    margin-left: 30px;
+    margin-bottom: -20px;
+
+}
+
+.redes-sociais {
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+}
+
+.container-redes-sociais {
+    text-align: center;
+    align-items: center;
+    padding-left: 50px;
+    display: flex;
+    border: 0px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mapBox {
+    float: right;
+    margin-right: 150px;
+    margin-top: -120px;
+    border: 5px solid black;
+    border-radius: 5px;
+}
