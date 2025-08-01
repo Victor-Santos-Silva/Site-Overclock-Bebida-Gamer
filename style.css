@@ -60,7 +60,6 @@ li {
     color: black;
 }
 
-
 /* Media Query para telas menores que 768px */
 @media (max-width: 768px) {
     header {
@@ -87,54 +86,10 @@ li {
     }
 }
 
-.slideshow-container {
-    background-color: #52c6d8;
-}
 
+/* Carrosel */
 .img-layout {
     width: 100%;
-}
-
-/* Hide the images by default */
-.mySlides {
-    text-align: center;
-
-}
-
-.botoes {
-    text-align: center;
-    background-color: #52c6d8;
-    margin-top: -40px;
-}
-
-
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
 }
 
 /* Fading animation */
@@ -154,80 +109,87 @@ li {
 }
 
 
-
 /* Layout secundario  */
-
 .container-layout {
-    text-align: center;
     background-color: #52c6d8;
-    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
     margin-top: -5px;
 }
 
-.imagens-Layout {
-    width: 380px;
-    height: 350px;
-    margin-top: 10px;
-    margin-left: 90px;
-    margin-right: 90px;
+.card {
     background-color: #33a3dc;
-    border-radius: 50px;
-    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    flex-grow: 1;
+    max-width: 380px;
+    padding: 10px;
 }
 
-.container-paragrafo {
-    display: flex;
+.imagens-Layout {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card p {
     font-weight: bold;
-    margin-top: -40px;
-    color: white;
-}
-
-.frase-one {
-    margin-left: 150px;
-}
-
-.frase-two {
-    margin-left: 290px;
-}
-
-.frase-three {
-    margin-left: 340px;
+    color: #fff;
+    padding: 15px;
 }
 
 
 
 /* Overclock Com Texto */
 
-.barra-preta {
-    margin-top: 80px;
-    z-index: 2;
-    position: absolute;
-
-}
-
-.barra-reta {
-    width: 1000px;
-    border-radius: 30px;
-    margin-left: 45%;
-    margin-top: 2%;
-}
-
-.paragrafo {
-    z-index: 1;
+/* Container principal que vai alinhar os itens */
+.container-overclock-texto {
+    display: grid;
+    /* Ativa o CSS Grid */
+    place-items: center;
+    /* Centraliza os filhos na horizontal e vertical */
+    position: relative;
+    /* Contexto para o z-index (opcional com grid, mas boa prática) */
+    padding: 40px 20px;
+    /* Espaçamento interno */
     text-align: center;
-    font-weight: bold;
-
 }
 
-.Titulo-paragrafo {
+/* O container do texto que fica na frente */
+.content-texto {
+    color: #333;
+    /* Cor do texto mais escura para legibilidade */
+    z-index: 2;
+    /* Fica na frente */
+    font-weight: bold;
+    max-width: 800px;
+    /* Limita a largura do texto para não ficar muito extenso */
+}
+
+/* Estilo do Título */
+.titulo {
     font-size: 40px;
     text-decoration: underline;
+    margin-bottom: 20px;
+    /* Espaço abaixo do título */
+    color: black;
 }
 
-.barra-reta-paragrafo {
-    margin-left: 200px;
-    margin-right: 200px;
+/* Estilo da lista de benefícios */
+.lista-beneficios {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    line-height: 1.6;
+    /* Aumenta o espaço entre as linhas para melhor leitura */
+    font-size: 18px;
 }
+
 
 /* Sabores dos Potes */
 
