@@ -6,108 +6,123 @@ body {
 
 }
 
-/* Cabeçalho */
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Boa prática para controlar melhor o tamanho dos elementos */
+}
+
 header {
     background-color: black;
     color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-items: center;
-    justify-items: center;
+    padding: 20px 5%;
+    /* Usa padding para dar espaço nas laterais */
     display: flex;
-}
-
-.link-cabecalho {
-    text-decoration: none;
-    color: white;
-    display: inline-flex;
-
-}
-
-.link-cabecalho:hover {
-    background-color: #33a3dc;
-    padding: 8px;
-    border: 2px solid white;
-    border-radius: 5px;
-
-}
-
-.lupa {
-    width: 50px;
-    margin-left: 80px;
-    margin-top: 0;
+    align-items: center;
+    justify-content: space-between;
+    /* ESSENCIAL: Joga a logo para um lado e o menu para o outro */
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a linha de baixo se não couberem */
 }
 
 .Logo {
-    width: 250px;
-    margin-left: 18%;
+    width: 200px;
+    /* Um tamanho base para a logo */
+    height: auto;
+    /* Mantém a proporção */
 }
 
 ul {
     display: flex;
     list-style: none;
     font-weight: bold;
+    align-items: center;
 }
 
 li {
-    margin-left: 15px;
-    margin-right: 15px;
-
+    margin: 0 15px;
+    /* Espaçamento entre os itens do menu */
 }
 
-/* Layout Primario  */
+.link-cabecalho {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* Adiciona uma transição suave para o hover */
+}
 
-/* .layout {
+.link-cabecalho:hover {
+    background-color: #33a3dc;
+    color: black;
+}
+
+
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        /* Altera a direção do flex para vertical */
+        justify-content: center;
+        /* Centraliza os itens (logo e menu) */
+        gap: 20px;
+        /* Adiciona um espaço entre a logo e o menu */
+    }
+
+    ul {
+        flex-direction: column;
+        /* Coloca os itens do menu um embaixo do outro */
+        text-align: center;
+        /* Centraliza o texto dos links */
+        width: 100%;
+        /* Faz o menu ocupar toda a largura */
+    }
+
+    li {
+        margin: 10px 0;
+        /* Adiciona espaçamento vertical entre os links */
+    }
+}
+
+.slideshow-container {
+    background-color: #52c6d8;
+}
+
+.img-layout {
     width: 100%;
-    text-align: center;
-    background-color: #52c6d8;
-    border: #52c6d8;
-} */
+}
 
-.slideshow-container{
-    background-color: #52c6d8;
-}
-.img-layout{
-    width: 1901px;
-    height: 860px;
-}
-  /* Hide the images by default */
-  .mySlides {
+/* Hide the images by default */
+.mySlides {
     text-align: center;
-    
-  }
-  .botoes{
+
+}
+
+.botoes {
     text-align: center;
     background-color: #52c6d8;
     margin-top: -40px;
-  }
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
+}
+
+
+/* Position the "next button" to the right */
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+}
 
-  
-  /* The dots/bullets/indicators */
-  .dot {
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -115,23 +130,29 @@ li {
     background-color: white;
     border-radius: 50%;
     display: inline-block;
-  }
-  
-  .active, .dot:hover {
+}
+
+.active,
+.dot:hover {
     background-color: #717171;
-  }
-  
-  /* Fading animation */
-  .fade {
+}
+
+/* Fading animation */
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-  
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 
 
 /* Layout secundario  */
@@ -312,7 +333,7 @@ li {
     border-radius: 10px;
     border: 1px solid white;
     text-decoration: none;
-    color:white
+    color: white
 }
 
 .botao:hover {
@@ -320,7 +341,7 @@ li {
     background-color: #000000;
     padding: 10px;
     border-radius: 10px;
-    color:#33a3dc;
+    color: #33a3dc;
     text-decoration: none;
 
 }
