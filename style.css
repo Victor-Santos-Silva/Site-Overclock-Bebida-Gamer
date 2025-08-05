@@ -441,153 +441,264 @@ li {
     }
 }
 
-/* titulo do overclock upgrade */
-.container-titulos {
-    padding: 40px;
-    font-size: 50px;
-    text-align: center;
-    background-color: #000000;
+/* Estilo geral da seção */
+.secao-sobre {
+    background-color: #f4f7f6;
+    /* Um fundo cinza claro para destacar a seção */
+    padding: 80px 20px;
+    /* Espaçamento interno generoso */
+    color: #333;
 }
 
-.titulo-overclock {
-    color: white;
-    margin-bottom: 0;
+/* Container principal com Flexbox */
+.container-sobre {
+    display: flex;
+    align-items: center;
+    /* Alinha as duas colunas verticalmente */
+    justify-content: center;
+    flex-wrap: wrap;
+    /* ESSENCIAL: Faz as colunas empilharem em telas pequenas */
+    gap: 60px;
+    /* Espaço entre a coluna de texto e a de vídeo */
+    max-width: 1200px;
+    /* Limita a largura máxima em telas grandes */
+    margin: 0 auto;
+    /* Centraliza o container */
+}
 
+/* --- Coluna de Texto --- */
+.sobre-texto {
+    /* Define que a coluna deve crescer/encolher, com uma base de 450px */
+    flex: 1 1 450px;
+}
+
+.titulo-principal {
+    margin-bottom: 30px;
+}
+
+.titulo-overclock,
+.titulo-upgrade {
+    font-size: 4rem;
+    /* Tamanho grande para impacto */
+    font-weight: 900;
+    /* Fonte bem pesada */
+    text-transform: uppercase;
+    line-height: 1;
+    color: #1a1a1a;
 }
 
 .titulo-upgrade {
-    color: #33a3dc;
-    margin-top: 0;
-
-}
-
-/* Video da Overclock Com Escrita */
-.container-video {
-    background-color: black;
-    margin-top: -30px;
-    padding-bottom: 50px;
-}
-
-.video-overclock {
-    float: right;
-    margin-right: 50px;
-    margin-top: -400px;
-    margin-bottom: 50px;
-    border: 3px solid white;
+    color: #52c6d8;
+    /* Cor de destaque que você usou antes */
 }
 
 .frase-titulo {
-    color: white;
-    padding-left: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #2c2c2c;
 }
 
-.vantagens {
-    color: white;
-    padding-left: 5px;
-    padding-top: 5px;
+/* Lista de Vantagens */
+.lista-vantagens {
+    list-style: none;
+    /* Remove as bolinhas padrão da lista */
+    padding: 0;
     display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espaço entre os itens da lista */
+    align-items: flex-start;
+}
+
+.vantagem-item {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha o ícone com o topo do texto */
+    gap: 15px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.icone-vantagem {
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    /* Pequeno ajuste para alinhar perfeitamente */
+}
+
+.vantagem-item p {
     margin: 0;
-    font-weight: bold;
-    font-size: 25px;
+    /* Remove a margem padrão do parágrafo */
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.bolinha-azul {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    margin-left: 25px;
-
+/* --- Coluna de Vídeo --- */
+.sobre-video {
+    /* Define que a coluna deve crescer/encolher, com uma base de 500px */
+    flex: 1 1 500px;
 }
 
-.imagens-bolinha {
-    display: flex;
-    margin-bottom: 30px;
-    margin-left: 25px;
-    align-items: center;
+.video-player {
+    width: 100%;
+    /* O vídeo ocupa 100% da largura da sua coluna */
+    height: auto;
+    /* A altura se ajusta automaticamente */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Fim do Site */
-.fim-do-site {
+/* --- Media Query para ajustes finos em telas menores --- */
+@media (max-width: 768px) {
+    .secao-sobre {
+        padding: 40px 15px;
+        /* Reduz o espaçamento em telas menores */
+    }
+
+    .titulo-overclock,
+    .titulo-upgrade {
+        font-size: 2.5rem;
+        /* Reduz o tamanho da fonte do título principal */
+    }
+
+    .frase-titulo {
+        font-size: 1.2rem;
+    }
+
+    .sobre-texto {
+        /* Centraliza o texto quando ele está empilhado */
+        text-align: center;
+    }
+
+    .vantagem-item {
+        /* Alinha o texto da vantagem à esquerda mesmo com o container centralizado */
+        text-align: left;
+    }
+}
+
+
+/* --- Estilo Geral do Rodapé --- */
+.site-footer {
+    background-color: #1a1a1a;
+    /* Cor de fundo escura */
+    color: #f0f0f0;
+    /* Cor de texto clara */
+    font-family: Arial, sans-serif;
+}
+
+/* --- Seção de Contato (Topo) --- */
+.footer-contato {
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: white;
-    color: #33a3dc;
-}
-
-.local {
-    display: flex;
-}
-
-.img-localizacao {
-    width: 50px;
-    height: 50px;
-    padding-top: 10px;
-}
-
-.img-email {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.img-telefone {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-/* Rodapé */
-.container-footer {
-    margin-top: 50px;
-    margin-left: 250px;
-}
-
-footer {
-    background-color: #33a3dc;
-    color: black;
-    padding: 10px;
-    padding-bottom: 170px;
-}
-
-h6 {
-    display: flex;
-    margin: 0;
-    padding-left: 20px;
-}
-
-.kalles {
-    color: #33a3dc;
-}
-
-.rodape {
-    margin-left: 30px;
-    margin-bottom: -20px;
-
-}
-
-.redes-sociais {
-    width: 50px;
-    height: 50px;
-    padding-right: 10px;
-}
-
-.container-redes-sociais {
-    text-align: center;
+    /* Distribui os itens igualmente */
     align-items: center;
-    padding-left: 50px;
-    display: flex;
-    border: 0px;
-    text-decoration: none;
-    color: inherit;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem em telas menores */
+    gap: 20px 40px;
+    /* 20px de espaço vertical, 40px horizontal */
+    padding: 30px 20px;
+    border-bottom: 1px solid #333;
+    /* Linha sutil de separação */
 }
 
-.mapBox {
-    float: right;
-    margin-right: 150px;
-    margin-top: -120px;
-    border: 5px solid black;
-    border-radius: 5px;
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.contato-icone {
+    width: 24px;
+    height: 24px;
+}
+
+.contato-item p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #dcdcdc;
+}
+
+/* --- Seção Principal (Meio) --- */
+.footer-principal {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Espaço entre os ícones de redes sociais */
+    margin-bottom: 30px;
+}
+
+.footer-redes a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-redes a:hover img {
+    transform: scale(1.15);
+    /* Aumenta o ícone no hover */
+    opacity: 0.8;
+    /* Leve transparência no hover */
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.footer-copyright a {
+    color: #52c6d8;
+    /* Cor de destaque para o link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
+}
+
+/* --- Seção do Mapa (Fim) --- */
+.footer-mapa {
+    /* O mapa não terá padding para ocupar 100% da largura */
+    line-height: 0;
+    /* Remove espaço extra abaixo do iframe */
+}
+
+.footer-mapa iframe {
+    width: 100%;
+    height: 350px;
+    /* Altura fixa para o mapa */
+    border: 0;
+}
+
+/* --- Ajustes para Telas Pequenas (Responsividade) --- */
+@media (max-width: 768px) {
+    .footer-contato {
+        flex-direction: column;
+        /* Empilha os itens de contato verticalmente */
+        align-items: flex-start;
+        /* Alinha à esquerda */
+        gap: 25px;
+        /* Aumenta o espaço vertical */
+    }
+
+    .footer-redes {
+        gap: 15px;
+    }
+
+    .footer-redes a img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-mapa iframe {
+        height: 250px;
+        /* Reduz a altura do mapa em celulares */
+    }
 }
