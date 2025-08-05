@@ -191,122 +191,149 @@ li {
 }
 
 
+
 /* Sabores dos Potes */
+.title-sabores {
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    color: white;
+    background-color: #52c6d8;
+    margin-top: -30px;
+    margin-bottom: 0;
+}
 
 .container-sabores {
-    background-color: #33a3dc;
-    padding: 10px;
-    color: white;
+    background-color: #52c6d8;
+    display: flex;
+    justify-content: center;
+    /* Centraliza os cards */
+    align-items: stretch;
+    /* Faz todos os cards terem a mesma altura */
+    flex-wrap: wrap;
+    gap: 30px;
+    /* Aumenta o espaço entre os cards */
+    padding: 40px 20px;
+    /* Mais espaço vertical */
+    margin-top: -5px;
 }
 
-.titulo-principal-sabores {
+.pote-sabor {
+    background-color: #ffffff;
+    /* Fundo branco para criar o efeito de card */
     text-align: center;
-}
-
-.imagens-sabores {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 30px;
-
-}
-
-.sabores {
-    display: flex;
-    width: 200px;
-    margin-left: 60px;
-    margin-right: 50px;
-    border: 3px solid white;
-    border-radius: 5px;
-
-}
-
-.sabores-one {
-    display: flex;
-    width: 200px;
-    margin-left: 80px;
-    margin-right: 15px;
-    border: 3px solid white;
-    border-radius: 5px;
-}
-
-.sabores-two {
-    display: flex;
-    width: 200px;
-    margin-left: 20px;
-    margin-right: 80px;
-    border: 3px solid white;
-    border-radius: 5px;
-}
-
-.sabores-three {
-    display: flex;
-    width: 200px;
-    margin-left: 60px;
-    margin-right: 60px;
-    border: 3px solid white;
-    border-radius: 5px;
-}
-
-.container-titulo-sabores {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-}
-
-.titulo-sabores {
-    background-color: #52c6d8;
     padding: 20px;
-    border-radius: 50px;
-}
-
-.Container-rotulos {
+    border-radius: 15px;
+    /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    flex-basis: 250px;
+    /* Define uma largura base para cada card */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 60px;
-    margin-left: 70px;
-    margin-top: 50px;
-
+    transition: all 0.3s ease;
+    /* Transição suave para o efeito hover */
 }
 
-.rotulos {
-    width: 250px;
-    height: 250px;
-    border: 3px solid black;
-    border-radius: 5px;
+.pote-sabor:hover {
+    transform: translateY(-10px);
+    /* Levanta o card */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    /* Sombra mais forte */
 }
 
-.more {
-    margin-bottom: 50px;
+.img-pote {
+    width: 100%;
+    /* Ocupa a largura do card */
+    max-width: 200px;
+    /* Limita o tamanho máximo */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.titulo-sabor {
+    font-size: 1.5rem;
+    /* Tamanho da fonte */
+    color: #333;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    /* Faz o título empurrar o rótulo para baixo, alinhando-os */
+}
+
+.img-rotulo {
+    width: 100%;
+    max-width: 150px;
+    /* Rótulo um pouco menor que o pote */
+    height: auto;
+}
+/* --- Estilos do Modal --- */
+
+/* Fundo escurecido que cobre a tela toda */
+.modal-overlay {
+    display: none; /* Inicia escondido */
+    position: fixed; /* Fica fixo na tela mesmo com rolagem */
+    z-index: 1000; /* Garante que fique na frente de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto com 85% de opacidade */
+    justify-content: center;
+    align-items: center;
+}
+
+/* O container branco onde a imagem ficará */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 90vw; /* Largura máxima de 90% da tela */
+    max-height: 90vh; /* Altura máxima de 90% da tela */
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-
-
 }
 
-.botao {
+/* A imagem dentro do modal */
+.modal-content img {
+    max-width: 100%;
+    max-height: calc(90vh - 40px); /* Garante que a imagem não ultrapasse o modal */
+    height: auto;
+}
+
+/* O botão 'X' para fechar */
+.modal-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #000;
+    background-color: #fff;
+    font-size: 35px;
     font-weight: bold;
-    background-color: #52c6d8;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid white;
-    text-decoration: none;
-    color: white
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    border: 2px solid #000;
 }
 
-.botao:hover {
-    font-weight: bold;
-    background-color: #000000;
-    padding: 10px;
-    border-radius: 10px;
-    color: #33a3dc;
-    text-decoration: none;
-
+.modal-close:hover {
+    color: #fff;
+    background-color: #f44336; /* Vermelho no hover */
+    border-color: #f44336;
 }
+
+/* Adiciona um cursor de ponteiro nos cards que podem ser clicados */
+.pote-sabor.clickable {
+    cursor: pointer;
+}
+
 
 /* Noticias */
 
