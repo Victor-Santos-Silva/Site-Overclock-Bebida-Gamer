@@ -60,8 +60,7 @@ li {
     color: black;
 }
 
-/* Media Query para telas menores que 768px */
-@media (max-width: 768px) {
+@media(max-width: 1354px) {
     header {
         flex-direction: column;
         /* Altera a direção do flex para vertical */
@@ -70,6 +69,33 @@ li {
         gap: 20px;
         /* Adiciona um espaço entre a logo e o menu */
     }
+}
+
+@media(max-width: 1140px) {
+   .link-cabecalho{
+    font-size: small;
+   }
+}
+/* 
+@media(max-width: 1050px) {
+   .link-cabecalho{
+    font-size: small;
+   }
+}
+ */
+/* Media Query para telas menores que 768px */
+@media (max-width: 1000px) {
+    header {
+        flex-direction: column;
+        /* Altera a direção do flex para vertical */
+        align-items: center;
+        /* Centraliza os itens horizontalmente */
+    }
+
+    .Logo {
+        width: 150px;
+        /* Reduz o tamanho da logo em telas pequenas */
+    }
 
     ul {
         flex-direction: column;
@@ -77,7 +103,6 @@ li {
         text-align: center;
         /* Centraliza o texto dos links */
         width: 100%;
-        /* Faz o menu ocupar toda a largura */
     }
 
     li {
